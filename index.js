@@ -2,9 +2,13 @@ const startBtn = document.querySelector("button");
 const moles = document.querySelectorAll(".mole");
 const scoreBox = document.querySelector(".score");
 let score = 0;
+let gameStarted = false;
 
 startBtn.addEventListener("click", () => {
-  setInterval(() => {
+  if (gameStarted) return;
+  gameStarted = true;
+  
+    setInterval(() => {
     const randomIndex = Math.floor(Math.random() * moles.length);
     const mole = moles[randomIndex];
 
