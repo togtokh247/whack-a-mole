@@ -8,17 +8,17 @@ startBtn.addEventListener("click", () => {
     const randomIndex = Math.floor(Math.random() * moles.length);
     const mole = moles[randomIndex];
 
-    mole.style.top = "0%"; // мол гарч ирнэ
+    mole.style.top = "0%"; 
     setTimeout(() => {
-      mole.style.top = "100%"; // 1 секундийн дараа нуух
+      mole.style.top = "100%"; 
     }, 1000);
   }, 1500);
 });
 
 moles.forEach((mole) => {
   mole.addEventListener("click", () => {
-    score++;       // оноо нэмэгдэнэ
-    render();      // дэлгэц шинэчлэгдэх
+    score++;       
+    render();      
   });
 });
 
